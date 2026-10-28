@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="HANZA – rahvusvaheline tootmispartner. Tutvu ettevõtte, tootmistehnoloogiate ja HANZA Mechanics Tartu võimalustega.">
+<title>HANZA | Tootmine lihtsamaks</title>
+<style>
+:root{--navy:#102c46;--blue:#1769aa;--cyan:#40b9d4;--ink:#172b3b;--muted:#607384;--light:#f2f6f8;--white:#fff;--line:#dce5eb;--orange:#f4a340}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);line-height:1.6;background:#fff}a{color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(220,229,235,.8)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:29px;letter-spacing:2px;color:var(--navy)}.brand-mark{width:34px;height:34px;border-radius:9px;background:var(--blue);display:grid;place-items:center;color:white;font-size:21px;transform:skew(-8deg)}.navlinks{display:flex;align-items:center;gap:27px}.navlinks a{text-decoration:none;font-size:14px;font-weight:700;color:#31495c;transition:color .2s}.navlinks a:hover{color:var(--blue)}.nav-cta{background:var(--blue);color:#fff!important;padding:11px 17px;border-radius:5px}.menu-toggle{display:none;border:0;background:var(--light);font-size:24px;padding:6px 12px;border-radius:6px}
+.hero{position:relative;min-height:610px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,rgba(9,30,49,.94) 0%,rgba(9,30,49,.77) 45%,rgba(9,30,49,.18) 100%),url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero-content{padding:92px 0 105px;max-width:690px}.eyebrow{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:800;color:var(--cyan);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";height:2px;width:30px;background:currentColor}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-2px;margin:20px 0 22px;font-weight:850}.hero p{font-size:19px;color:#e2edf4;max-width:590px;margin:0 0 30px}.actions{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border:1px solid transparent;border-radius:5px;padding:13px 19px;font-weight:800;font-size:14px;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--cyan);color:#082c43}.btn-outline{border-color:rgba(255,255,255,.65);color:white;background:rgba(255,255,255,.06)}
+.stats{background:var(--navy);color:white}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.stat{padding:27px 20px;border-right:1px solid rgba(255,255,255,.15)}.stat:last-child{border:0}.stat strong{display:block;font-size:34px;line-height:1.2;color:var(--cyan)}.stat span{display:block;font-size:13px;color:#d4e2ec;margin-top:6px}
+section{padding:88px 0}.section-head{max-width:720px;margin-bottom:38px}.section-head.center{text-align:center;margin-left:auto;margin-right:auto}.kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:850;color:var(--blue)}h2{font-size:clamp(30px,4vw,44px);line-height:1.14;letter-spacing:-1px;color:var(--navy);margin:10px 0 17px} .section-head p,.intro-copy p{color:var(--muted);font-size:16px;margin:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}.about-image{position:relative;min-height:420px;border-radius:8px;overflow:hidden;background:url('https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1100&q=85') center/cover}.image-label{position:absolute;bottom:20px;left:20px;right:20px;padding:18px 20px;background:rgba(13,43,66,.92);color:#fff;border-left:4px solid var(--cyan)}.image-label strong{display:block;font-size:18px}.image-label span{font-size:13px;color:#d4e5ee}.check-list{list-style:none;padding:0;margin:25px 0 30px;display:grid;gap:13px}.check-list li{display:flex;gap:12px;align-items:flex-start;color:#344d60}.check{flex:0 0 23px;width:23px;height:23px;border-radius:50%;background:#e1f6f8;color:#087d91;display:grid;place-items:center;font-weight:900;font-size:13px;margin-top:2px}
+.services{background:var(--light)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service-card{background:white;border:1px solid var(--line);border-radius:8px;padding:27px 25px;min-height:230px;transition:transform .2s,box-shadow .2s}.service-card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(18,49,72,.09)}.service-icon{width:49px;height:49px;background:#e7f5f8;color:var(--blue);border-radius:8px;display:grid;place-items:center;font-size:25px;margin-bottom:19px}.service-card h3{color:var(--navy);margin:0 0 9px;font-size:19px}.service-card p{font-size:14px;color:var(--muted);margin:0}
+.tartu-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.tartu-photo{min-height:430px;border-radius:8px;background:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1100&q=85') center/cover}.location-card{background:var(--navy);color:#fff;padding:30px;border-radius:8px;margin-top:24px}.location-card h3{margin:0 0 10px;color:var(--cyan)}.location-card p{margin:5px 0;color:#e0eaf1;font-size:14px}.location-card a{color:#fff}
+.process{background:#fff}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;counter-reset:step}.step{padding:24px 20px;border-top:3px solid var(--cyan);background:#f7f9fa}.step:before{counter-increment:step;content:"0" counter(step);display:block;font-weight:900;font-size:28px;color:var(--blue);margin-bottom:13px}.step h3{margin:0 0 8px;font-size:17px;color:var(--navy)}.step p{margin:0;color:var(--muted);font-size:14px}
+.values{background:linear-gradient(120deg,#0e2a43,#174d73);color:white}.values h2{color:white}.values .section-head p{color:#d0e0ea}.value-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.value{border:1px solid rgba(255,255,255,.22);padding:22px 18px;border-radius:6px}.value span{display:block;color:var(--cyan);font-size:24px;margin-bottom:15px}.value strong{font-size:15px}.value p{font-size:13px;color:#d3e2eb;margin:7px 0 0}
+.contact{background:var(--light)}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}.contact-panel{background:white;border:1px solid var(--line);padding:30px;border-radius:8px}.contact-panel h3{margin-top:0;color:var(--navy)}.contact-item{padding:13px 0;border-bottom:1px solid var(--line);font-size:14px}.contact-item:last-child{border-bottom:0}.contact-item strong{display:block;color:var(--navy);margin-bottom:3px}.contact-item a{color:var(--blue);text-decoration:none}.sources{font-size:13px;color:var(--muted);margin-top:25px}.sources a{color:var(--blue)}
+footer{background:#091f31;color:#d1dfe8;padding:28px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer-brand{color:white;font-size:22px;font-weight:900;letter-spacing:2px}.footer-row p{font-size:12px;margin:4px 0;color:#a9bdca}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{font-size:12px;color:#d1dfe8;text-decoration:none}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){.menu-toggle{display:block}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:18px 22px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}.navlinks.open{display:flex}.navlinks a{padding:5px}.about-grid,.tartu-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:repeat(2,1fr)}.value-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.hero{min-height:560px}.hero-content{padding:75px 0}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.15)}}
+@media(max-width:520px){.container{width:min(100% - 28px,1160px)}.brand{font-size:24px}.hero h1{letter-spacing:-1.2px}.hero p{font-size:16px}.service-grid,.steps,.value-grid{grid-template-columns:1fr}.stat{padding:21px 13px}.stat strong{font-size:29px}section{padding:65px 0}.about-image,.tartu-photo{min-height:300px}.footer-row{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#avaleht" aria-label="HANZA avaleht"><span class="brand-mark">H</span> HANZA</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ava menüü" aria-expanded="false">☰</button>
+    <nav class="navlinks" id="navLinks" aria-label="Põhinavigatsioon">
+      <a href="#meist">Meist</a><a href="#tehnoloogiad">Tehnoloogiad</a><a href="#tartu">HANZA Eestis</a><a href="#vaartused">Väärtused</a><a class="nav-cta" href="#kontakt">Kontakt ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="avaleht">
+  <div class="container hero-content">
+    <div class="eyebrow">Rahvusvaheline tootmispartner</div>
+    <h1>Teeme tootmise<br>lihtsamaks.</h1>
+    <p>HANZA ühendab erinevad tootmistehnoloogiad ja teenused üheks tervikuks, et muuta tootmine tõhusamaks, tarneahelad kindlamaks ja koostöö lihtsamaks.</p>
+    <div class="actions"><a class="btn btn-primary" href="#meist">Avasta HANZA <span>→</span></a><a class="btn btn-outline" href="#tartu">Meie tegevus Eestis</a></div>
+  </div>
+</section>
+<div class="stats"><div class="container stats-grid">
+  <div class="stat"><strong>2008</strong><span>Ettevõtte asutamise aasta</span></div>
+  <div class="stat"><strong>~5000</strong><span>Töötajat kogu kontsernis</span></div>
+  <div class="stat"><strong>30</strong><span>Tehast rahvusvahelises võrgustikus</span></div>
+  <div class="stat"><strong>6</strong><span>Peamist tootmistehnoloogia valdkonda</span></div>
+</div></div>
+<section id="meist"><div class="container about-grid">
+  <div class="about-image reveal"><div class="image-label"><strong>Üks partner. Terviklik lahendus.</strong><span>Tehnoloogia, tootmine ja koostöö ühes süsteemis.</span></div></div>
+  <div class="intro-copy reveal"><div class="kicker">Kes me oleme?</div><h2>Tootmine ühest kohast</h2>
+    <p>HANZA on rahvusvaheline tootmis- ja teadmistepõhine ettevõte, mis aitab tööstusettevõtetel oma tootmist korraldada ja tarneahelaid lihtsustada. Ettevõte asutati 2008. aastal ning selle aktsiad on noteeritud Nasdaq Stockholmi börsil.</p>
+    <p style="margin-top:15px">Selle asemel, et tellida eri tootmisetappe paljudelt partneritelt, saavad kliendid kasutada HANZA ühendatud tootmisvõrgustikku. See aitab parandada koostööd, vähendada tarneahela keerukust ning toetada kvaliteetset ja tõhusat tootmist.</p>
+    <ul class="check-list"><li><span class="check">✓</span><span>Erinevad tootmistehnoloogiad ühe partneri juures</span></li><li><span class="check">✓</span><span>Rahvusvaheline tehaste ja spetsialistide võrgustik</span></li><li><span class="check">✓</span><span>Fookus kvaliteedil, tõhususel ja jätkusuutlikkusel</span></li></ul>
+    <a class="btn btn-primary" href="https://hanza.com/about-us/" target="_blank" rel="noopener">Ettevõtte ametlik veebileht ↗</a>
+  </div>
+</div></section>
+<section class="services" id="tehnoloogiad"><div class="container">
+  <div class="section-head center reveal"><div class="kicker">Mida me teeme?</div><h2>Tootmistehnoloogiad</h2><p>HANZA koondab mitu tootmisvaldkonda, et pakkuda klientidele terviklikke ja omavahel ühendatud lahendusi.</p></div>
+  <div class="service-grid">
+    <article class="service-card reveal"><div class="service-icon">⌁</div><h3>Lehtmetalli töötlemine</h3><p>Metallilehtede lõikamine, painutamine, stantsimine ja muud töötlused täpsete detailide valmistamiseks.</p></article>
+    <article class="service-card reveal"><div class="service-icon">⚙</div><h3>Mehaaniline töötlemine</h3><p>CNC-treimine ja -freesimine aitavad valmistada keeruka kujuga ning täpseid metall- ja plastdetaile.</p></article>
+    <article class="service-card reveal"><div class="service-icon">⌘</div><h3>Elektroonika</h3><p>Elektroonikakomponentide ja -seadmete tootmine ning integreerimine kliendi tootesse.</p></article>
+    <article class="service-card reveal"><div class="service-icon">⟿</div><h3>Kaablid ja juhtmestikud</h3><p>Kaablite ettevalmistamine, märgistamine, ühendamine ja juhtmestike kokkupanek.</p></article>
+    <article class="service-card reveal"><div class="service-icon">▦</div><h3>Raskemehaanika</h3><p>Tööstuslike metallkonstruktsioonide ja suuremate mehaaniliste osade tootmine.</p></article>
+    <article class="service-card reveal"><div class="service-icon">✓</div><h3>Koostamine ja testimine</h3><p>Detailidest ja komponentidest valmivad komplektsed tooted, mida saab seadistada ja kontrollida.</p></article>
+  </div>
+</div></section>
+<section id="tartu"><div class="container tartu-grid">
+  <div class="reveal"><div class="kicker">HANZA Eestis</div><h2>HANZA Mechanics Tartu</h2>
+    <p style="color:var(--muted)">Tartu tehases pakutakse terviklikke tootmislahendusi, mis hõlmavad lehtmetalli töötlemist, mehaanilist töötlemist, kaablite valmistamist ja koostamist.</p>
+    <p style="color:var(--muted);margin-top:14px">Tehase võimekuste hulka kuuluvad näiteks CNC-treimine ja -freesimine, laseriga lõikamine, painutamine, pinnatöötlus ning toodete kokkupanek ja testimine. Selliseid teenuseid vajavad eri tööstusharud, sealhulgas meditsiiniseadmete ja toiduainetööstuse seadmete tootjad.</p>
+    <div class="location-card"><h3>Võta ühendust Tartu tehasega</h3><p><strong>Aadress:</strong> Silikaadi 5, Vahi küla, 60534, Eesti</p><p><strong>Telefon:</strong> <a href="tel:+3727468800">+372 746 8800</a></p><p><strong>Veeb:</strong> <a href="https://tartu.hanza.com/" target="_blank" rel="noopener">tartu.hanza.com ↗</a></p></div>
+  </div>
+  <div class="tartu-photo reveal" role="img" aria-label="Tööstuslik tootmiskeskkond"></div>
+</div></section>
+<section class="process"><div class="container">
+  <div class="section-head reveal"><div class="kicker">Kuidas see toimib?</div><h2>Ideest valmistooteni</h2><p>Ühendatud tootmisteenused aitavad viia toote arenduse ja valmistamise selgemasse ning paremini juhitud protsessi.</p></div>
+  <div class="steps">
+    <article class="step reveal"><h3>Vajaduse mõistmine</h3><p>Selgitatakse välja kliendi toote, materjalide ja tootmise nõuded.</p></article>
+    <article class="step reveal"><h3>Tootmise kavandamine</h3><p>Valitakse sobivad tehnoloogiad ja korraldatakse tootmise töövoog.</p></article>
+    <article class="step reveal"><h3>Valmistamine ja koostamine</h3><p>Komponendid töödeldakse, ühendatakse ja pannakse kokku.</p></article>
+    <article class="step reveal"><h3>Kvaliteedi kontroll</h3><p>Valminud toodet kontrollitakse ja valmistatakse ette kliendile tarnimiseks.</p></article>
+  </div>
+</div></section>
+<section class="values" id="vaartused"><div class="container">
+  <div class="section-head reveal"><div class="kicker">Meie tööpõhimõtted</div><h2>Väärtused, mis juhivad koostööd</h2><p>HANZA väärtused aitavad kujundada töökultuuri, kus inimesed võtavad vastutuse ja leiavad koos paremaid lahendusi.</p></div>
+  <div class="value-grid">
+    <div class="value reveal"><span>◎</span><strong>Oleme keskendunud</strong><p>Hoiame tähelepanu eesmärkidel ja tulemustel.</p></div>
+    <div class="value reveal"><span>↗</span><strong>Teeme asjad lihtsamaks</strong><p>Otsime võimalusi vähendada tarbetut keerukust.</p></div>
+    <div class="value reveal"><span>◇</span><strong>Oleme meeskonnamängijad</strong><p>Saavutame rohkem, kui teeme koostööd.</p></div>
+    <div class="value reveal"><span>☷</span><strong>Suhtleme avatult</strong><p>Jagame infot selgelt ja õigel ajal.</p></div>
+    <div class="value reveal"><span>✓</span><strong>Võtame vastutuse</strong><p>Seisame oma töö ja otsuste eest.</p></div>
+  </div>
+</div></section>
+<section class="contact" id="kontakt"><div class="container">
+  <div class="section-head reveal"><div class="kicker">Kontakt ja lisainfo</div><h2>Uuri HANZA kohta rohkem</h2><p>Lisateavet ettevõtte teenuste, tehaste ja karjäärivõimaluste kohta leiab HANZA ametlikelt veebilehtedelt.</p></div>
+  <div class="contact-grid">
+    <div class="contact-panel reveal"><h3>HANZA Mechanics Tartu</h3>
+      <div class="contact-item"><strong>Asukoht</strong>Silikaadi 5, Vahi küla, Eesti</div>
+      <div class="contact-item"><strong>Telefon</strong><a href="tel:+3727468800">+372 746 8800</a></div>
+      <div class="contact-item"><strong>Ametlik Tartu veebileht</strong><a href="https://tartu.hanza.com/" target="_blank" rel="noopener">tartu.hanza.com ↗</a></div>
+      <div class="contact-item"><strong>HANZA kontsern</strong><a href="https://hanza.com/" target="_blank" rel="noopener">hanza.com ↗</a></div>
+    </div>
+    <div class="contact-panel reveal"><h3>Miks HANZA on oluline?</h3><p style="color:var(--muted)">Tänapäeva toodetes kasutatakse sageli palju erinevaid materjale, komponente ja tehnoloogiaid. HANZA mudel ühendab mitu tootmisetappi ning aitab ettevõtetel teha koostööd ühe tootmispartneriga. Eestis pakub HANZA tööstuslikke oskusi ja tehnoloogiaid ka Tartu piirkonnas.</p><p style="color:var(--muted)">See veebileht on õppetöö jaoks loodud ettevõtte tutvustus, mitte HANZA ametlik veebileht.</p>
+      <div class="sources"><strong>Infoallikad</strong><br>• <a href="https://hanza.com/about-us/" target="_blank" rel="noopener">HANZA – About Us</a><br>• <a href="https://hanza.com/hanza-mechanics-tartu/" target="_blank" rel="noopener">HANZA Mechanics Tartu</a><br>• <a href="https://hanza.com/investor/pressreleases/hanza-year-end-report-2025/" target="_blank" rel="noopener">HANZA Year-end report 2025</a><br><br><em>Ettevõtte näitajad on toodud HANZA avaldatud 2025. aasta aruande kokkuvõtte põhjal.</em></div>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer><div class="container footer-row"><div><div class="footer-brand">HANZA</div><p>Teeme tootmise lihtsamaks.</p></div><div class="footer-links"><a href="#meist">Meist</a><a href="#tehnoloogiad">Tehnoloogiad</a><a href="#tartu">Eesti</a><a href="#kontakt">Kontakt</a></div><p>Õppetööks loodud veebilehe prototüüp · 2026</p></div></footer>
+<script>
+const toggle=document.getElementById('menuToggle'),links=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
